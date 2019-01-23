@@ -11,4 +11,14 @@ describe('EventBus:', () => {
 
     bus.emit('arbitraryEventType', 'payload');
   });
+
+  it('should dispatch specific events to specific listener', done => {
+    const bus = new EventBus();
+    bus.on('TEST', (payload) => {
+      expect(payload).toEqual('payload');
+      done();
+    });
+
+    bus.emit('TEST', 'payload');
+  });
 });
