@@ -116,6 +116,8 @@ spiderman.join(avengers);
 ``` 
  
 Service => Class without state 
+     
+You can find an example of a simple service implementation without events in [schedule.js](./src/domain/schedule/schedule.js)
        
 **Further instructions:**
 
@@ -149,8 +151,10 @@ aggregate.dispatch('MyEvent', data);
       });
     });
 ``` 
+You can find an example of a simple service implementation with events in [schedule.js](./src/domain/schedule/schedule.js)
 
 **Some questions:** 
 - How does the increased complexity affect our code? How about the tests?
 - What is the effect on coupling/decoupling?
 - Do you observe any differences in your aggregates when using internal event handlers (i.e., subscribe in constructor and call private method) vs. subscribing outside of the class (e.g. in the test/index.js) and calling a public command method?
+
