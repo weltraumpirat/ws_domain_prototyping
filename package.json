@@ -1,13 +1,13 @@
 {
   "name": "ws_domain_prototyping",
   "version": "1.0.0",
-  "description": "",
+  "description": "Playground for the Workshop",
   "main": "src/index.js",
   "scripts": {
-    "test": "./node_packages/.bin/jasmine-node src"
+    "test": "jest"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Tobias Goeschel",
+  "license": "MIT",
   "devDependencies": {
     "eslint": "^5.11.1",
     "eslint-config-standard": "^12.0.0",
