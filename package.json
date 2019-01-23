@@ -4,7 +4,8 @@
   "description": "Playground for the Workshop",
   "main": "src/index.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "start": "node src/index.js"
   },
   "author": "Tobias Goeschel",
   "license": "MIT",
