@@ -5,3 +5,5 @@ const eventBus = new EventBus();
 const eventList = new EventList(eventBus);
 
 module.exports = { eventBus, eventList };
+
+console.log('### App started ###');
