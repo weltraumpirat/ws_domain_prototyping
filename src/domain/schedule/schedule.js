@@ -1,7 +1,7 @@
-const Aggregate = require('../aggregate');
+const Service = require('../service');
 const schedule = require('../../schedule');
 
-class Schedule {
+class ScheduleService {
   request (theatre, time, age = 18) {
     return schedule.theatres
       .filter(t => !theatre || t.name === theatre)
@@ -10,7 +10,7 @@ class Schedule {
   }
 }
 
-class ScheduleWithEvents extends Aggregate {
+class ScheduleServiceWithEvents extends Service {
   provide (theatre, time, age = 18) {
     const movies = schedule.theatres
       .filter(t => !theatre || t.name === theatre)
@@ -24,4 +24,4 @@ class ScheduleWithEvents extends Aggregate {
   }
 }
 
-module.exports = { Schedule, ScheduleWithEvents };
+module.exports = { ScheduleService, ScheduleServiceWithEvents };

@@ -1,5 +1,5 @@
 const EventBus = require('../eventBus');
-const { Schedule, ScheduleWithEvents } = require('./schedule');
+const { ScheduleService, ScheduleServiceWithEvents } = require('./schedule');
 
 const ALL_MOVIES = [
   {
@@ -136,26 +136,26 @@ const ALL_THEATRE_ONE_6 = [
 describe('Schedule: ', () => {
   describe('Given no theatre specified', () => {
     it('Should include all movies', () => {
-      expect(new Schedule().request()).toEqual(ALL_MOVIES);
+      expect(new ScheduleService().request()).toEqual(ALL_MOVIES);
     });
   });
   describe('Given a theatre is specified', () => {
     describe('And no age specified', () => {
       it('Should include all movies from that theatre', () => {
-        expect(new Schedule().request('Theatre One')).toEqual(ALL_THEATRE_ONE);
+        expect(new ScheduleService().request('Theatre One')).toEqual(ALL_THEATRE_ONE);
       });
     });
   });
   describe('And age specified', () => {
     it('Should only include age appropriate movies from that theatre', () => {
-      expect(new Schedule().request('Theatre One', null, 6)).toEqual(ALL_THEATRE_ONE_6);
+      expect(new ScheduleService().request('Theatre One', null, 6)).toEqual(ALL_THEATRE_ONE_6);
     });
   });
 });
 
 const expectProvidedSchedule = (done, expected, ...request) => {
   const eventBus = new EventBus();
-  const schedule = new ScheduleWithEvents(eventBus);
+  const schedule = new ScheduleServiceWithEvents(eventBus);
   eventBus.on('SCHEDULE_REQUESTED', (query) => {
     schedule.provide(query.theatre, query.time, query.age);
   });
