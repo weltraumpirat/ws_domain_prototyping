@@ -137,10 +137,9 @@ Use the same tools as in exercise 1, but:
 - No direct return values. Send events.
 - You may extend the Aggregate class to use the built-in NodeJS event emitter:
 ```
-aggregate.on('MyEvent', data=>{...});      // subscribe
-aggregate.emit('MyEvent', data);          // dispatch
+aggregate.dispatch('MyEvent', data);        
 ```
-- You can subscribe/emit directly on the eventbus (see [index.js](./src/index.js)).
+- You can subscribe/emit directly on the EventBus (see [index.js](./src/index.js)).
 - Use ```done()``` to deal with the async assertions:
 ```
     it('something should be true', done => {
@@ -154,4 +153,4 @@ aggregate.emit('MyEvent', data);          // dispatch
 **Some questions:** 
 - How does the increased complexity affect our code? How about the tests?
 - What is the effect on coupling/decoupling?
-- Do you observe any differences in your aggregates when using internal event handlers (i.e., subcribe and call private method) vs. subscribing in the test/index.js and calling a public command method?
+- Do you observe any differences in your aggregates when using internal event handlers (i.e., subscribe in constructor and call private method) vs. subscribing outside of the class (e.g. in the test/index.js) and calling a public command method?
