@@ -1,0 +1,1 @@
+This file is needed so that Git will store the package folder.
