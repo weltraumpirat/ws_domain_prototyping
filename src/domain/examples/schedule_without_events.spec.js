@@ -1,5 +1,5 @@
 const EventBus = require('../eventBus');
-const { ScheduleService, ScheduleServiceWithEvents } = require('./schedule');
+const { ScheduleService, ScheduleServiceWithEvents } = require('./schedule_without_events');
 
 const ALL_MOVIES = [
   {
