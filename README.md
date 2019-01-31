@@ -35,3 +35,9 @@ npm start
 #### 2. Workshop materials
 
 Checkout the [Workshop Materials](workshop_materials.md)
+
+#### 3. Exercises
+
+[Exercise 1](exercise1.md)
+
+[Exercise 2](exercise2.md)
