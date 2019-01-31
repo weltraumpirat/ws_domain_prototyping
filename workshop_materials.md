@@ -2,11 +2,13 @@
 
 ## 1. Problem Space
 We will try to build a ticket sales system for a local cinema (I know, *booring*, but it's a domain we all should be reasonably familiar with).
-Here's the output of our initial domain analysis workshop:
+
+Here's the output of our initial domain analysis workshops:
 - EventStorming output ["The Picture That Explains Everything"](https://realtimeboard.com/app/board/o9J_kyCuemg=/)
 - EventStorming output [Aggregates & Services](https://realtimeboard.com/app/board/o9J_kyLn_MM=/)
 - ExampleMapping output [Rules & Examples](https://realtimeboard.com/app/board/o9J_kyLtRNY=/)
 - [Floor Plan](https://realtimeboard.com/app/board/o9J_kyEXCdI=/) (the cinema has three floors, all of them look the same) 
+- The movie titles, times and seating information are provides as a [JSON file](src/schedule.json), for convenience.
 
 ## 2. Solution Space
 
