@@ -16,7 +16,10 @@ aggregate.dispatch('MyEvent', data);
       });
     });
 ``` 
+There is an EventList class, which you can use to debug/log your events. It will record everything that is emitted on the central EventBus. You can ```require()``` both from [index.js](src/index.js) (or just use them there).
+ 
 You can find an example of a simple service implementation with events in [schedule_with_events.js](./src/domain/examples/schedule_with_events.js)
+
 
 **Further instructions:**
 - Events sometimes need carry data ("payload"). 

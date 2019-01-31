@@ -12,7 +12,7 @@ For more info on how to do this in JavaScript, see the [JavaScript examples](./j
 **Further instructions:**
 - Take the easiest approach, but make sure to keep the ubiquitous language
 - Do not worry about persistence - just use arrays, objects, primitives (but encapsulate!) 
-- Do not use event handlers (you may ```emit``` and use the EventList for logging/insights (see below)).                       
+- Do not use event handlers (you may ```emit``` and use the EventList for logging/insights (see [Exercise 2](exercise2.md))).                       
 - Observe package boundaries: Use the folders to keep things inside their bounded context.
 
 **Some questions:** 
